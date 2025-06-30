@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ostad-ingress
+  namespace: ostad
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: ostad.local
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: ostad-server
+                port:
+                  number: 5050
+          - path: /mongo
+            pathType: Prefix
+            backend:
+              service:
+                name: mongo-express
+                port:
+                  number: 8081
