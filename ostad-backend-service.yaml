@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ostad-server
-  namespace: ostad
+  namespace: kwoshik
 spec:
   selector:
     app: ostad-server

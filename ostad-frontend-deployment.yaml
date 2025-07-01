@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ostad-server
+  name: ostad-ui
   namespace: kwoshik
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ostad-server
+      app: ostad-ui
   template:
     metadata:
       labels:
-        app: ostad-server
+        app: ostad-ui
     spec:
       containers:
-        - name: ostad-server
-          image: rootovertwo/ostad-server:latest
+        - name: ostad-ui
+          image: rootovertwo/ostad-ui:latest
           ports:
-            - containerPort: 5050
+            - containerPort: 5173
           env:
             - name: MONGO_URI
               valueFrom:

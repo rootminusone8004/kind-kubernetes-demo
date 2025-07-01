@@ -1,0 +1,29 @@
+# Basic Kubernetes project
+
+It is a simple project to demonstrate how a single simple very minimum basic kubernetes cluster work.
+
+## what it is
+
+This project basically shows cluster making, configmap, secret file management, deployment, service, pods generation etc.
+
+## file descriptions
+
+| files (.yaml)             | description                                                 |
+|---------------------------+-------------------------------------------------------------|
+| kind-cluster              | defines the local K8s cluster configuration for use         |
+| namespace                 | defines a custom namespace to logically isolate resources   |
+| mongo-configmap           | provides non-sensitive MongoDB config data                  |
+| mongo-secret              | stores sensitive data like username and password            |
+| mongo-deployment          | deploys the mongo database                                  |
+| mongo-service             | exposes mongoDB internally via clusterIP for backend access |
+| mongo-express-deployment  | deploys the Mongo Express UI for managing MongoDB           |
+| mongo-express-service     | exposes Mongo Express                                       |
+| ostad-backend-deployment  | deploys the ostad backend                                   |
+| ostad-backend-service     | exposes the backend internally                              |
+| ostad-frontend-deployment | deploys the frontend                                        |
+| ostad-frontend-service    | exposes the frontend to Ingress for public access           |
+
+## license
+
+Since it is a demo project, no license is required.
+
