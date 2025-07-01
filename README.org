@@ -1,12 +1,12 @@
-# Basic Kubernetes project
+* Basic Kubernetes project
 
 It is a simple project to demonstrate how a single simple very minimum basic kubernetes cluster work.
 
-## what it is
+** what it is
 
 This project basically shows cluster making, configmap, secret file management, deployment, service, pods generation etc.
 
-## file descriptions
+** file descriptions
 
 | files (.yaml)             | description                                                 |
 |---------------------------+-------------------------------------------------------------|
@@ -23,7 +23,7 @@ This project basically shows cluster making, configmap, secret file management, 
 | ostad-frontend-deployment | deploys the frontend                                        |
 | ostad-frontend-service    | exposes the frontend to Ingress for public access           |
 
-## license
+** license
 
 Since it is a demo project, no license is required.
 
